@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  db:
+    container_name: milesoda-postgres-02
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+
+  pgadmin:
+    container_name: milesoda-pgadmin-02
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_PASSWORD: postgres
+      PGADMIN_DEFAULT_EMAIL: milesoda@yahoo.com
+    ports:
+      - "5050:80"

@@ -3,10 +3,10 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ProductsRepository } from './products.repository';
 import { Products } from './products.entity';
-import { IProduct } from 'src/interfaces/interfaces';
+import { IProduct } from '../interfaces/interfaces';
 import { ProductsBodyDto } from './dto/products-body.dto';
 import { Response, Request } from 'express';
-import { data } from 'src/data/data';
+import { data } from '../data/data';
 
 @Injectable()
 export class ProductsService {
